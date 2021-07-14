@@ -20,7 +20,7 @@
      return -1;
   
   }
-  
+  let pigLatinReturn;
 
   const pigLatin = (word) => {
     let aWord = word.toLowerCase().trim();
@@ -30,6 +30,7 @@
       let noVowel = aWord.concat("ay");
       //console.log("no vowel in word:" + noVowel);
       console.log('this is the value of noVowel:' ,noVowel);
+      
       return noVowel;
     } else if(positionOfFirstVowel(aWord) === 0) {
         let firstVowel = aWord.concat("yay")
@@ -71,6 +72,7 @@ button.addEventListener("click", function(){
     let input = document.getElementById("inputbox")
     // getting the word that was typed into  the box
     let text = input.value;
+    pigLatinReturn = pigLatin(text);
     // .value returns the value of the text field
     console.log("The word that was entered to be translated: ", text);
 
@@ -100,7 +102,7 @@ button.addEventListener("click", function(){
     ul.appendChild(li);
 
     // update the newly created li with the value of the translated word
-    li.innerText = "Entered word: " + text + "  ||" + "   Translated word: " + pigLatin(text);
+    li.innerText = "Entered word: " + text + "  ||" + "   Translated word: " + pigLatinReturn;
     // !!!!!!!!!!!!!!!!!!!!!! the pigLatin(text) for the equal to really did a number on me
     //  but it todally makes since now.  I want to print the value of the function ran with the input value ran thru it
 

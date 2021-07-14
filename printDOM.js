@@ -88,8 +88,8 @@ button.addEventListener("click", function(){
     }
 //***************** starting to run translation function
 
-    pigLatin(text);
-    console.log('this in the value of text: ',text);
+    //pigLatin(text);
+    //console.log('this in the value of text: ',text);
 
 
 
